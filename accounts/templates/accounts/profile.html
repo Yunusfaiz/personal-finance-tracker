@@ -1,0 +1,71 @@
+{% extends 'accounts/layout.html' %}
+{% load static %}
+
+{% block body %}
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="{% url 'dashboard' %}" class="nav-brand">💰 Finance Tracker</a>
+            <div class="nav-links">
+                <a href="{% url 'dashboard' %}">Dashboard</a>
+                <a href="{% url 'transaction_list' %}">Transactions</a>
+                <a href="{% url 'category_list' %}">Categories</a>
+                <a href="{% url 'profile' %}">Profile</a>
+                <a href="{% url 'logout' %}" class="btn-logout">Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        {% if messages %}
+            <div class="messages">
+                {% for message in messages %}
+                    <div class="alert alert-{{ message.tags }}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+
+        <div class="profile-container">
+            <div class="profile-card">
+                <div class="profile-header">
+                    <h1 class="profile-title">My Profile</h1>
+                </div>
+
+                <div class="profile-info">
+                    <div class="profile-info-item">
+                        <strong>Username:</strong> {{ user.username }}
+                    </div>
+                    <div class="profile-info-item">
+                        <strong>Email:</strong> {{ user.email }}
+                    </div>
+                    <div class="profile-info-item">
+                        <strong>Member Since:</strong> {{ user.date_joined|date:"F d, Y" }}
+                    </div>
+                </div>
+
+                <h2 class="profile-stats-title">Account Statistics</h2>
+                
+                <div class="profile-stats-grid">
+                    <div class="profile-stat-box transactions">
+                        <div class="profile-stat-value">{{ total_transactions|default:"0" }}</div>
+                        <div class="profile-stat-label">Total Transactions</div>
+                    </div>
+                    <div class="profile-stat-box categories">
+                        <div class="profile-stat-value">{{ total_categories|default:"0" }}</div>
+                        <div class="profile-stat-label">Categories</div>
+                    </div>
+                </div>
+
+                <div class="profile-actions">
+                    <a href="{% url 'dashboard' %}" class="btn btn-secondary">Back to Dashboard</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Finance Tracker. All rights reserved.</p>
+    </footer>
+
+{% endblock %} 
