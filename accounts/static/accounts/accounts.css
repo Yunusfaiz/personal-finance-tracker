@@ -4,8 +4,8 @@
 :root {
     /* Primary Colors */
     --primary-color: #020202;
-    --primary-hover: #5568d3;
-    --secondary-color: #764ba2;
+    --primary-hover: #d35555;
+    --secondary-color: #194e50;
     
     /* Status Colors */
     --success-color: #28a745;
@@ -96,7 +96,7 @@ body {
 }
 
 .btn-primary {
-    background: var(--white);
+    background: var(--primary-color);
     color: var(--primary-color);
     font-weight: 600;
 }

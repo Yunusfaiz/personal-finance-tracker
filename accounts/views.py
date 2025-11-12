@@ -24,12 +24,12 @@ def login_user(request):
             print("login failed")
             return redirect('login')
     else:
-        return render(request, "accounts/login.html", {})
+        return render(request, "registration/login.html", {})
 
 
 def profile(request):
-    return render(request, "accounts/profile.html")
+    return render(request, "registration/profile.html")
 
 
 def register(request):
-    return render(request, "accounts/register.html")
+    return render(request, "registration/register.html")
