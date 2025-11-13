@@ -13,12 +13,10 @@
     </nav>
 
     <main class="main-content">
-        {% if messages %}
-            {% for message in messages %}
-                <div class="alert alert-{{ message.tags }}">
-                    {{ message }}
-                </div>
-            {% endfor %}
+        {% if message %}
+            <div class="alert-error">
+                {{ message }}
+            </div>
         {% endif %}
         <div class="auth-container">
             <div class="auth-card">
