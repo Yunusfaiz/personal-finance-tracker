@@ -4,7 +4,7 @@
 {% block body %}
     <nav class="navbar">
         <div class="nav-container">
-            <a href="" class="nav-brand">💰 Finance Tracker</a>
+            <a href="" class="nav-brand">Finance Tracker</a>
             <div class="nav-links">
                 <a href="{% url 'dashboard' %}">Dashboard</a>
                 <a href="{% url 'transaction_list' %}">Transactions</a>
@@ -29,25 +29,24 @@
         <div class="card">
             <div class="card-header">
                 <h1 class="card-title">Dashboard</h1>
-                <a href="" class="btn btn-success">+ Add Transaction</a>
+                <a href="{% url 'add_transaction' %}" class="btn btn-success">+ Add Transaction</a>
             </div>
 
-            <!-- Summary Statistics -->
             <div class="stats-grid">
                 <div class="stat-card income">
                     <div class="stat-label">Total Income</div>
-                    <div class="stat-value positive">$</div>
+                    <div class="stat-value positive">${{ total_income|default:"0.00" }}</div>
                 </div>
                 
                 <div class="stat-card expense">
                     <div class="stat-label">Total Expenses</div>
-                    <div class="stat-value negative">$</div>
+                    <div class="stat-value negative">${{ total_expenses|default:"0.00" }}</div>
                 </div>
                 
                 <div class="stat-card balance">
                     <div class="stat-label">Balance</div>
                     <div class="stat-value {% if balance >= 0 %}positive{% else %}negative{% endif %}">
-                        $
+                        ${{ balance|default:"0.00" }}
                     </div>
                 </div>
             </div>
@@ -96,7 +95,7 @@
             <div class="empty-state">
                 <div class="empty-state-icon">📊</div>
                 <div class="empty-state-text">No transactions yet</div>
-                <a href="" class="btn btn-success">Add Your First Transaction</a>
+                <a href="{% url 'add_transaction' %}" class="btn btn-success">Add Your First Transaction</a>
             </div>
             {% endif %}
         </div>

@@ -3,9 +3,9 @@
 /* ========== COLOR VARIABLES - CHANGE COLORS HERE ========== */
 :root {
     /* Primary Colors */
-    --primary-color: #000000;
-    --primary-hover: #FFF8D4;
-    --secondary-color: #92a7b6;
+    --primary-color: #020202;
+    --primary-hover: #d35555;
+    --secondary-color: #194e50;
     
     /* Status Colors */
     --success-color: #28a745;
@@ -16,9 +16,9 @@
     --info-color: #17a2b8;
     
     /* Income/Expense Colors */
-    --income-color: #FFF8D4;
-    --expense-color: #FFF8D4;
-    --balance-color: #FFF8D4;
+    --income-color: #09ff00;
+    --expense-color: #ff0000;
+    --balance-color: #000000;
     
     /* Neutral Colors */
     --white: #ffffff;

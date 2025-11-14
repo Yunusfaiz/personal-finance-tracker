@@ -2,6 +2,8 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from django.contrib.auth.models import User
+from django.contrib.auth.decorators import login_required
+from finance.models import Transaction, Category
 
 # Create your views here.
 
@@ -31,8 +33,16 @@ def logout_user(request):
     return redirect('login')
 
 
+@login_required
 def profile(request):
-    return render(request, "registration/profile.html")
+    total_transactions = Transaction.objects.filter(user=request.user).count()
+    total_categories = Category.objects.filter(user=request.user).count()
+    
+    context = {
+        'total_transactions': total_transactions,
+        'total_categories': total_categories,
+    }
+    return render(request, 'registration/profile.html', context)
 
 
 def register_user(request):

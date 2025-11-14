@@ -4,7 +4,7 @@
 {% block body %}
     <nav class="navbar">
         <div class="nav-container">
-            <a href="{% url 'dashboard' %}" class="nav-brand">💰 Finance Tracker</a>
+            <a href="{% url 'dashboard' %}" class="nav-brand">Finance Tracker</a>
             <div class="nav-links">
                 <a href="{% url 'dashboard' %}">Dashboard</a>
                 <a href="{% url 'transaction_list' %}">Transactions</a>
@@ -29,7 +29,7 @@
         <div class="card">
             <div class="card-header">
                 <h1 class="card-title">All Transactions</h1>
-                <a href="{% url 'transaction_form' %}" class="btn btn-success">+ Add Transaction</a>
+                <a href="{% url 'add_transaction' %}" class="btn btn-success">+ Add Transaction</a>
             </div>
 
             <!-- Filters -->
@@ -115,7 +115,7 @@
             <div class="empty-state">
                 <div class="empty-state-icon">📝</div>
                 <div class="empty-state-text">No transactions found</div>
-                <a href="{% url 'transaction_form' %}" class="btn btn-success">Add Transaction</a>
+                <a href="{% url 'add_transaction' %}" class="btn btn-success">Add Transaction</a>
             </div>
             {% endif %}
         </div>

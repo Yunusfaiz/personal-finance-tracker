@@ -4,7 +4,7 @@
 {% block body %}
     <nav class="navbar">
         <div class="nav-container">
-            <a href="{% url 'dashboard' %}" class="nav-brand">💰 Finance Tracker</a>
+            <a href="{% url 'dashboard' %}" class="nav-brand">Finance Tracker</a>
             <div class="nav-links">
                 <a href="{% url 'dashboard' %}">Dashboard</a>
                 <a href="{% url 'transaction_list' %}">Transactions</a>
@@ -19,7 +19,7 @@
         <div class="card">
             <div class="card-header">
                 <h1 class="card-title">Manage Categories</h1>
-                <a href="{% url 'category_form' %}" class="btn btn-success">+ Add Category</a>
+                <a href="{% url 'add_category' %}" class="btn btn-success">+ Add Category</a>
             </div>
 
             {% if categories %}
@@ -41,7 +41,7 @@
             <div class="empty-state">
                 <div class="empty-state-icon">🏷️</div>
                 <div class="empty-state-text">No categories yet</div>
-                <a href="{% url 'category_form' %}" class="btn btn-success">Add Your First Category</a>
+                <a href="{% url 'add_category' %}" class="btn btn-success">Add Your First Category</a>
             </div>
             {% endif %}
         </div>
