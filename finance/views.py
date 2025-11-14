@@ -20,7 +20,3 @@ def category_list(request):
 
 def category_form(request):
     return render(request, "finance/category_form.html")
-
-
-def logout_fun(request):
-    pass

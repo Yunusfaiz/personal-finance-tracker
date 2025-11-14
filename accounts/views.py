@@ -23,9 +23,12 @@ def login_user(request):
                 'message': "Wrong credentials try again"
             })
     else:
-        return render(request, "registration/login.html", {
-            'message': "Error occured please try again"
-        })
+        return render(request, "registration/login.html")
+
+
+def logout_user(request):
+    logout(request)
+    return redirect('login')
 
 
 def profile(request):

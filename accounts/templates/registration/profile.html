@@ -4,13 +4,13 @@
 {% block body %}
     <nav class="navbar">
         <div class="nav-container">
-            <a href="{% url 'dashboard' %}" class="nav-brand">Finance Tracker</a>
+            <a href="{% url 'profile' %}" class="nav-brand">Finance Tracker</a>
             <div class="nav-links">
                 <a href="{% url 'dashboard' %}">Dashboard</a>
                 <a href="{% url 'transaction_list' %}">Transactions</a>
                 <a href="{% url 'category_list' %}">Categories</a>
                 <a href="{% url 'profile' %}">Profile</a>
-                <a href="" class="btn-logout">Logout</a>
+                <a href="{% url 'logout' %}" class="btn-logout">Logout</a>
             </div>
         </div>
     </nav>
