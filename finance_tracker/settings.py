@@ -27,7 +27,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = [
     '0.0.0.0',
-    'personal-finance-tracker-h1ct.onrender.com'
+    'personal-finance-tracker-26uo.onrender.com'
 ]
 
 
