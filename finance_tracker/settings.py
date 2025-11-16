@@ -27,7 +27,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = [
     '0.0.0.0',
-    'personal-finance-tracker-ion6.onrender.com'
+    'personal-finance-tracker-h1ct.onrender.com'
 ]
 
 
@@ -124,9 +124,9 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # For development
-STATICFILES_DIRS = [
-    BASE_DIR / "static",
-]
+# STATICFILES_DIRS = [
+  #  BASE_DIR / "static",
+#]
 
 # For production (after running collectstatic)
 STATIC_ROOT = BASE_DIR / "staticfiles"
