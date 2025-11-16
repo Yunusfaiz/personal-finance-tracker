@@ -25,7 +25,10 @@ SECRET_KEY = 'django-insecure-15dl%_&qb12-r)mn&re3re)4f$+@-hj$v@d%yj3f#3x0^kam-_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '0.0.0.0',
+    'personal-finance-tracker-h1ct.onrender.com'
+]
 
 
 # Application definition
@@ -121,9 +124,9 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # For development
-STATICFILES_DIRS = [
-    BASE_DIR / "static",
-]
+# STATICFILES_DIRS = [
+  #  BASE_DIR / "static",
+#]
 
 # For production (after running collectstatic)
 STATIC_ROOT = BASE_DIR / "staticfiles"
