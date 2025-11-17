@@ -30,6 +30,9 @@ ALLOWED_HOSTS = [
     'personal-finance-tracker-apzr.onrender.com'
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://personal-finance-tracker-26uo.onrender.com'
+]
 
 # Application definition
 
