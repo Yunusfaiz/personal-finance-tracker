@@ -31,7 +31,7 @@ ALLOWED_HOSTS = [
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://personal-finance-tracker-26uo.onrender.com'
+    'https://personal-finance-tracker-apzr.onrender.com'
 ]
 
 # Application definition
