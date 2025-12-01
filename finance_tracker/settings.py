@@ -27,11 +27,11 @@ DEBUG = False
 
 ALLOWED_HOSTS = [
     '0.0.0.0',
-    'personal-finance-tracker-apzr.onrender.com'
+    'personal-finance-tracker-4e1i.onrender.com'
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://personal-finance-tracker-apzr.onrender.com'
+    'https://personal-finance-tracker-4e1i.onrender.com'
 ]
 
 # Application definition
